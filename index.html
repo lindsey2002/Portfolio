@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ton Nom | Portfolio Développeur</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- ─── NAV ─── -->
+<nav>
+  <div class="nav-logo">SOFIA<span>.dev</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Accueil</a></li>
+    <li><a href="#services">Compétences</a></li>
+    <li><a href="#works">Projets</a></li>
+    <li><a href="#testimonials">Recommandations</a></li>
+    <li><a href="#cta">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="location.href='contact.html'">Me contacter ↗</button>
+  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+ 
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-left reveal">
+    <h1>GÉNIE<br>LOGICIEL</h1>
+    <span class="badge">Licence 3 · Infographie</span>
+    <p>Je conçois des interfaces intuitives et développe des solutions numériques centrées sur l'utilisateur.</p>
+  </div>
+ 
+  <!-- Replace src with your actual photo -->
+  <img
+    class="hero-photo"
+    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80"
+    alt="Photo de Sofia"
+  />
+ 
+  <div class="hero-right reveal">
+    <h2>FULL<br>STACK<br>DESIGNER</h2>
+    <div class="hero-socials">
+      <a href="#" title="LinkedIn">in</a>
+      <a href="#" title="GitHub">GH</a>
+      <a href="#" title="Behance">Be</a>
+      <a href="#" title="Instagram">IG</a>
+    </div>
+  </div>
+ 
+  <div class="hero-bottom reveal">
+    <div>
+      <strong>BONJOUR, JE SUIS HEREDIA</strong>
+      <p>Étudiante en Génie Logiciel (L3) & Licence Infographie · Passionnée par le design, le code et les expériences digitales mémorables.</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- ─── SERVICES ─── -->
+<section id="services">
+  <div class="services-intro">
+    <h2 class="section-title">MES COMPÉTENCES</h2>
+    <p>J'offre un ensemble de savoir-faire qui allie design visuel et développement technique pour créer des produits numériques complets et performants.</p>
+  </div>
+ 
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-card-img placeholder sc-blue">🖥️</div>
+      <div class="service-card-body">
+        <h3>Développement Web</h3>
+        <p>Je réalise des sites et applications web modernes, responsives et accessibles avec HTML, CSS, JavaScript et Laravel.</p>
+        <a href="projets.html" class="see-details">Voir projets ↗</a>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-card-img placeholder sc-teal">📱</div>
+      <div class="service-card-body">
+        <h3>Design UI/UX</h3>
+        <p>Je conçois des maquettes et prototypes sur Figma, en appliquant les principes d'ergonomie et d'expérience utilisateur.</p>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-card-img placeholder sc-purple">🎨</div>
+      <div class="service-card-body">
+        <h3>Infographie & Motion</h3>
+        <p>Maîtrise d'Adobe Photoshop, Illustrator et After Effects pour la création visuelle et les supports de communication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ─── WORKS ─── -->
+<section id="works">
+  <h2 class="section-title light reveal">MES PROJETS ACADÉMIQUES</h2>
+  <div class="works-grid">
+ 
+    <div class="work-card reveal">
+      <div class="work-card-bg">💻</div>
+      <div class="work-label"><h4>Application de gestion scolaire</h4></div>
+      <a href="#" class="see-details">Voir ↗</a>
+    </div>
+ 
+    <div class="work-card reveal">
+      <div class="work-card-bg">📲</div>
+      <a href="#" class="see-details">Voir ↗</a>
+      <div class="work-label"><h4>App mobile – Design & Prototype Figma</h4></div>
+    </div>
+ 
+    <div class="work-card reveal">
+      <div class="work-card-bg">🌐</div>
+      <div class="work-label"><h4>Site vitrine – Projet Infographie</h4></div>
+    </div>
+ 
+    <div class="work-card reveal">
+      <div class="work-card-bg">📊</div>
+      <div class="work-label"><h4>Dashboard data – React + API</h4></div>
+    </div>
+ 
+    <div class="work-card reveal">
+      <div class="work-card-bg">🎬</div>
+      <div class="work-label"><h4>Motion Design – After Effects</h4></div>
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- ─── STATS ─── -->
+<section id="stats">
+  <div class="stats-grid">
+    <div class="stat reveal">
+      <div class="stat-number">03<sup>+</sup></div>
+      <div class="stat-label">Années d'études</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-number">15<sup>+</sup></div>
+      <div class="stat-label">Projets réalisés</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-number">02</div>
+      <div class="stat-label">Licences en cours</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-number">4.8</div>
+      <div class="stat-label">Note moyenne</div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ─── PROCESS ─── -->
+<section id="process">
+  <h2 class="section-title reveal">MA MÉTHODE DE TRAVAIL</h2>
+  <div class="process-grid">
+    <div class="process-step reveal">
+      <div class="step-num">1</div>
+      <div class="process-step-img">🔍</div>
+      <div class="process-step-body">
+        <h4>Recherche & Analyse</h4>
+        <p>Je comprends le besoin du projet, analyse les utilisateurs cibles et définis les exigences fonctionnelles.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">2</div>
+      <div class="process-step-img">🗂️</div>
+      <div class="process-step-body">
+        <h4>Idéation & Planification</h4>
+        <p>Je structure l'architecture du projet, réalise des wireframes et planifie les étapes de développement.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">3</div>
+      <div class="process-step-img">⚙️</div>
+      <div class="process-step-body">
+        <h4>Design & Développement</h4>
+        <p>Je conçois les interfaces sur Figma puis je code le produit, fonctionnel et esthétique.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">4</div>
+      <div class="process-step-img">🚀</div>
+      <div class="process-step-body">
+        <h4>Tests & Livraison</h4>
+        <p>Je teste, corrige et livre le projet proprement documenté, prêt pour la présentation ou le déploiement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ─── TESTIMONIALS ─── -->
+<section id="testimonials">
+  <div class="testi-header">
+    <h2 class="section-title reveal">RECOMMANDATIONS</h2>
+    <div class="testi-nav">
+      <button>←</button>
+      <button>→</button>
+    </div>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <p>Heredia a fait preuve d'une rigueur et d'une créativité remarquables dans son projet de fin de semestre. Son sens du détail et sa maîtrise de Figma sont impressionnants pour une étudiante en L3.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👩‍🏫</div>
+        <div class="testi-author-info">
+          <h5>Dr. Aminata Diallo</h5>
+          <span>Professeure – UX Design</span>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <p>Sa maîtrise du développement front-end et sa capacité à travailler en équipe en font une collaboratrice précieuse. Elle livre toujours un travail soigné et bien structuré.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👨‍💻</div>
+        <div class="testi-author-info">
+          <h5>Mr. Karim Ndiaye</h5>
+          <span>Encadrant de stage – Tech4Africa</span>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <p>Une vraie polyvalence entre le code et le design. Heredia comprend rapidement les enjeux d'un projet et propose des solutions innovantes. Je la recommande vivement.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">🎓</div>
+        <div class="testi-author-info">
+          <h5>Prof. Oumar Sow</h5>
+          <span>Directeur de mémoire – Génie Logiciel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ─── WORKSTATION ─── -->
+<section id="workstation">
+  <h2 class="section-title light reveal">MON ESPACE DE TRAVAIL</h2>
+  <div class="ws-grid">
+    <div class="ws-card reveal">
+      <div class="ws-img">🖥️</div>
+      <div class="ws-body">
+        <h4>Mon bureau principal</h4>
+        <p>C'est ici que je passe la majorité de mon temps à coder et designer mes projets académiques.</p>
+      </div>
+    </div>
+    <div class="ws-card reveal">
+      <div class="ws-img">💻</div>
+      <div class="ws-body">
+        <h4>Mon MacBook</h4>
+        <p>Mon compagnon de code au quotidien, avec VS Code, Figma et la suite Adobe installés en permanence.</p>
+      </div>
+    </div>
+    <div class="ws-card reveal">
+      <div class="ws-img">📱</div>
+      <div class="ws-body">
+        <h4>Ma tablette</h4>
+        <p>Je l'utilise pour lire, annoter des ressources et tester mes interfaces en conditions réelles.</p>
+      </div>
+    </div>
+    <div class="ws-card reveal">
+      <div class="ws-img">🎧</div>
+      <div class="ws-body">
+        <h4>Setup nomade</h4>
+        <p>Pour travailler partout — bibliothèque, café ou coworking — avec tout le nécessaire.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ─── CTA ─── -->
+<section id="cta">
+  <h2 class="reveal">UN PROJET ?</h2>
+  <h2 class="reveal"><span>TRAVAILLONS</span> ENSEMBLE</h2>
+  <div class="cta-row">
+    <p>Que ce soit pour un stage, un projet académique collaboratif ou une opportunité professionnelle, je suis disponible et motivée.</p>
+    <a href="contact.html" class="hire-btn">
+      <span class="arrow">↗</span>
+      <span>CONTACT</span>
+    </a>
+  </div>
+</section>
+ 
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>SOFIA<span>.dev</span></h3>
+      <p style="color:rgba(255,255,255,0.45);font-size:0.8rem;margin-top:4px;">Étudiante en Génie Logiciel & Infographie</p>
+      <span class="footer-email">herediakoumba123@gmail.com</span>
+    </div>
+    <div class="footer-col">
+      <h4>Liens rapides</h4>
+      <ul>
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#services">Compétences</a></li>
+        <li><a href="#works">Projets</a></li>
+        <li><a href="#testimonials">Recommandations</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Réseaux</h4>
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Behance</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Adresse</h4>
+      <p class="footer-address">Dakar, Sénégal<br>Disponible pour des opportunités<br>locales et à distance.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>2025 © HEREDIA.DEV — TOUS DROITS RÉSERVÉS</p>
+  </div>
+</footer>
+
+    <script src="JSCRIPT/main.js"></script>
+</body>
+</html>

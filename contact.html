@@ -1,0 +1,248 @@
+<link rel="stylesheet" href="CSS/contact.css">
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="index.html">SOFIA<span>.dev</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="index.html#services">Compétences</a></li>
+    <li><a href="index.html#works">Projets</a></li>
+    <li><a href="index.html#testimonials">Recommandations</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="mailto:herediakoumba123@gmail.com" class="nav-cta">Me contacter ↗</a>
+  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+ 
+<!-- ── HERO ── -->
+<section id="contact-hero">
+  <div class="ch-left">
+    <div class="ch-eyebrow">Heredia contact</div>
+    <h1>PARLONS<br><span>DE TON</span><br>PROJET</h1>
+  </div>
+  <div class="ch-right">
+    <p>Que tu aies une idée de projet, une opportunité de stage, une collaboration académique ou simplement envie d'échanger — je serai ravie de te répondre !</p>
+    <div class="availability-badge">
+      <div class="dot"></div>
+      <span>Disponible pour un stage dès Mars 2026</span>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── QUICK INFO STRIP ── -->
+<div class="info-strip">
+  <div class="info-item">
+    <div class="info-icon">📧</div>
+    <div class="info-item-text">
+      <h5>Email</h5>
+      <p>herediakoumba123@gmail.com</p>
+    </div>
+  </div>
+  <div class="info-item">
+    <div class="info-icon">📍</div>
+    <div class="info-item-text">
+      <h5>Localisation</h5>
+      <p>Dakar, Sénégal</p>
+    </div>
+  </div>
+  <div class="info-item">
+    <div class="info-icon">⏱️</div>
+    <div class="info-item-text">
+      <h5>Temps de réponse</h5>
+      <p>Sous 48h</p>
+    </div>
+  </div>
+  <div class="info-item">
+    <div class="info-icon">🌍</div>
+    <div class="info-item-text">
+      <h5>Langues</h5>
+      <p>Français · Anglais</p>
+    </div>
+  </div>
+</div>
+ 
+<!-- ── MAIN CONTACT SECTION ── -->
+<section class="contact-main">
+ 
+  <!-- LEFT -->
+  <div class="contact-left reveal">
+    <div class="section-label">Restons en contact</div>
+    <h2>PLUSIEURS<br>FAÇONS DE<br>ME JOINDRE</h2>
+    <p>N'hésite pas à me contacter via le canal qui te convient le mieux. Je consulte mes messages tous les jours et je réponds rapidement.</p>
+ 
+    <div class="contact-cards">
+      <a href="mailto:herediakoumba123@gmail.com" class="contact-card">
+        <div class="card-icon ci-blue">📧</div>
+        <div>
+          <h4>Email</h4>
+          <p>heredia@example.com</p>
+        </div>
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="contact-card">
+        <div class="card-icon ci-yellow">💼</div>
+        <div>
+          <h4>LinkedIn</h4>
+          <p>linkedin.com/in/heredia</p>
+        </div>
+      </a>
+      <a href="https://github.com/Lindsey-27" target="_blank" class="contact-card">
+        <div class="card-icon ci-dark">🐱</div>
+        <div>
+          <h4>GitHub</h4>
+          <p>github.com/heredia</p>
+        </div>
+      </a>
+      <a href="https://behance.net" target="_blank" class="contact-card">
+        <div class="card-icon ci-green">🎨</div>
+        <div>
+          <h4>Behance</h4>
+          <p>behance.net/heredia</p>
+        </div>
+      </a>
+    </div>
+ 
+    <div class="socials-row">
+      <a href="#" class="social-btn">in LinkedIn</a>
+      <a href="https://github.com/Lindsey-27" class="social-btn">GH GitHub</a>
+      <a href="#" class="social-btn">Be Behance</a>
+      <a href="#" class="social-btn yt">IG Instagram</a>
+    </div>
+  </div>
+ 
+  <!-- RIGHT – FORM -->
+  <div class="contact-form-wrap reveal">
+    <div class="form-label-top">— Formulaire de contact</div>
+    <h3>ÉCRIS-MOI<br><span>UN MESSAGE</span></h3>
+ 
+    <form id="contactForm" name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" /> 
+      <input type="hidden" name="objet" id="objetHidden" value="Stage" />
+       
+      <div class="form-row">
+        <div class="form-group">
+          <label>Prénom</label>
+          <input type="text" placeholder="Jean" required />
+        </div>
+        <div class="form-group">
+          <label>Nom</label>
+          <input type="text" placeholder="Dupont" required />
+        </div>
+      </div>
+ 
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="jean@example.com" required />
+      </div>
+ 
+      <div class="form-group">
+        <label>Tu es…</label>
+        <select>
+          <option value="">Sélectionne ton profil</option>
+          <option>Un recruteur / RH</option>
+          <option>Un encadrant / professeur</option>
+          <option>Un étudiant / collaborateur</option>
+          <option>Une entreprise (stage / mission)</option>
+          <option>Autre</option>
+        </select>
+      </div>
+ 
+      <span class="chips-label">Objet du message</span>
+      <div class="chips" id="chips">
+        <button type="button" class="chip active" onclick="toggleChip(this)">Stage</button>
+        <button type="button" class="chip" name="objet" onclick="toggleChip(this)">Collaboration</button>
+        <button type="button" class="chip" name="objet" onclick="toggleChip(this)">Projet académique</button>
+        <button type="button" class="chip" name="objet" onclick="toggleChip(this)">Retour sur portfolio</button>
+        <button type="button" class="chip" name="objet" onclick="toggleChip(this)">Autre</button>
+      </div>
+ 
+      <div class="form-group">
+        <label>Ton message</label>
+        <textarea placeholder="Bonjour Sofia, je t'écris pour…" required></textarea>
+      </div>
+ 
+      <button type="submit" class="submit-btn">
+        Envoyer le message <span class="arrow">↗</span>
+      </button>
+    </form>
+ 
+    <div class="success-msg" id="successMsg">
+      <span class="check">✅</span>
+      <h4>MESSAGE ENVOYÉ !</h4>
+      <p>Merci ! Je t'écrirai dans les 48h. À très bientôt.</p>
+    </div>
+  </div>
+ 
+</section>
+ 
+<!-- ── FAQ ── -->
+<section id="faq">
+  <div class="section-label reveal">Questions fréquentes</div>
+  <h2 class="reveal" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);margin-top:8px;">TU AS DES QUESTIONS ?</h2>
+ 
+  <div class="faq-grid">
+    <div class="faq-item reveal" onclick="toggleFaq(this)">
+      <div class="faq-q">Es-tu disponible pour un stage ?</div>
+      <div class="faq-a">Oui ! Je recherche activement un stage en développement web / UI-UX ou infographie à partir de Mars 2026, pour une durée de 3 à 6 mois.</div>
+    </div>
+    <div class="faq-item reveal" onclick="toggleFaq(this)">
+      <div class="faq-q">Travailles-tu à distance ?</div>
+      <div class="faq-a">Absolument. Je suis à l'aise avec le travail à distance et j'utilise des outils collaboratifs comme Notion, Figma, GitHub et Slack au quotidien.</div>
+    </div>
+    <div class="faq-item reveal" onclick="toggleFaq(this)">
+      <div class="faq-q">Quelles technologies maîtrises-tu ?</div>
+      <div class="faq-a">HTML/CSS, JavaScript, Laravel, Python, Java, Figma, Adobe Photoshop, Illustrator et After Effects. Je suis toujours en train d'apprendre de nouvelles choses !</div>
+    </div>
+    <div class="faq-item reveal" onclick="toggleFaq(this)">
+      <div class="faq-q">Peux-tu collaborer sur des projets étudiants ?</div>
+      <div class="faq-a">Avec plaisir ! Si tu as un projet de groupe, un hackathon ou une idée à développer, n'hésite pas à me contacter. J'adore travailler en équipe.</div>
+    </div>
+    <div class="faq-item reveal" onclick="toggleFaq(this)">
+      <div class="faq-q">Dans quelle langue travailles-tu ?</div>
+      <div class="faq-a">Je travaille principalement en français, mais je suis tout à fait à l'aise pour communiquer et produire du contenu en anglais.</div>
+    </div>
+    <div class="faq-item reveal" onclick="toggleFaq(this)">
+      <div class="faq-q">Comment accéder à ton CV ?</div>
+      <div class="faq-a">Tu peux me le demander directement par email ou via LinkedIn. Je te l'enverrai dans les meilleurs délais avec mes références académiques.</div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>SOFIA<span>.dev</span></h3>
+      <p style="color:rgba(255,255,255,0.45);font-size:0.8rem;margin-top:4px;">Étudiante en Génie Logiciel & Infographie</p>
+      <span class="footer-email">herediakoumba123@gmail.com</span>
+    </div>
+    <div class="footer-col">
+      <h4>Liens rapides</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#services">Compétences</a></li>
+        <li><a href="index.html#works">Projets</a></li>
+        <li><a href="index.html#testimonials">Recommandations</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Réseaux</h4>
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Behance</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Adresse</h4>
+      <p class="footer-address">Dakar, Sénégal<br>Disponible pour des opportunités<br>locales et à distance.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>2024 © HEREDIA.DEV — TOUS DROITS RÉSERVÉS</p>
+  </div>
+</footer>
+<script src="JSCRIPT/contact.js"></script>
+</body>
+</html>

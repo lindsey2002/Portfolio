@@ -52,80 +52,125 @@
   <button class="filter-btn" onclick="filterTiles('mockup', this)">Mockup UI</button>
 </div>
  
-<!-- ── GEOMETRIC MOSAIC ── -->
-<section class="mosaic-section">
-  <div class="mosaic" id="mosaic">
- 
-    <!-- PROJECT 1 — Affiche -->
-    <div class="tile wide reveal" data-cat="affiche" data-index="0">
-      <div class="tile-inner" onclick="openLightbox(0)">
-        <div class="tile-placeholder p-blue">
-            <img class="tile-img" src="assets/dev-clair.png" alt="Affiche événement">
-        </div>
-        <!-- <img class="tile-img" src="images/projet1.jpg" alt="Affiche événement"> -->
-        <div class="tile-overlay">
-          <h3>Affiche Événement Culturel</h3>
-          <div class="tools">
-            <span class="tool-tag">Photoshop</span>
-            <span class="tool-tag">Illustrator</span>
-          </div>
-        </div>
-        <div class="cat-label">Affiche</div>
-        <div class="open-icon">↗</div>
+<div class="mosaic" id="mosaic">
+
+  <!-- LIGNE 1 : 1 grande + 1 moyenne -->
+  <div class="tile wide reveal" data-cat="affiche" data-index="0">
+    <div class="tile-inner" onclick="openLightbox(0)">
+      <div class="tile-placeholder p-blue">
+        <img class="tile-img" src="assets/_poster_affiche_test.png" alt="Affiche 1">
       </div>
+      <div class="tile-overlay"><h3>Affiche 1</h3><div class="tools"><span class="tool-tag">Photoshop</span></div></div>
+      <div class="cat-label">Affiche</div><div class="open-icon">↗</div>
     </div>
- 
-    <!-- PROJECT 2 — Logo -->
-    <div class="tile tall reveal" data-cat="logo" data-index="1">
-      <div class="tile-inner" onclick="openLightbox(1)">
-        <div class="tile-placeholder p-dark">✦</div>
-        <!-- <img class="tile-img" src="images/projet2.jpg" alt="Logo identité"> -->
-        <div class="tile-overlay">
-          <h3>Identité Visuelle — Brand</h3>
-          <div class="tools">
-            <span class="tool-tag">Illustrator</span>
-            <span class="tool-tag">Figma</span>
-          </div>
-        </div>
-        <div class="cat-label">Logo</div>
-        <div class="open-icon">↗</div>
-      </div>
-    </div>
- 
-    <!-- PROJECT 3 — Mockup -->
-    <div class="tile sqbig reveal" data-cat="mockup" data-index="2">
-      <div class="tile-inner" onclick="openLightbox(2)">
-        <div class="tile-placeholder p-yellow">📱</div>
-        <!-- <img class="tile-img" src="images/projet3.jpg" alt="Mockup UI"> -->
-        <div class="tile-overlay">
-          <h3>Mockup App Mobile UI</h3>
-          <div class="tools">
-            <span class="tool-tag">Figma</span>
-            <span class="tool-tag">Photoshop</span>
-          </div>
-        </div>
-        <div class="cat-label">Mockup UI</div>
-        <div class="open-icon">↗</div>
-      </div>
-    </div>
- 
-    <!-- Decorative tiles (no project, just visual) -->
-    <div class="tile slim" style="pointer-events:none;">
-      <div class="tile-inner" style="background: linear-gradient(135deg, var(--blue) 0%, #0D0D0D 100%); display:flex; align-items:center; justify-content:center;">
-        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="30,5 55,50 5,50" stroke="rgba(255,214,0,0.4)" stroke-width="1.5" fill="none"/>
-          <circle cx="30" cy="30" r="8" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
-        </svg>
-      </div>
-    </div>
-    <div class="tile slim" style="pointer-events:none;">
-      <div class="tile-inner" style="background: var(--yellow); display:flex; align-items:center; justify-content:center;">
-        <span style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--black);letter-spacing:2px;">DESIGN</span>
-      </div>
-    </div>
- 
   </div>
-</section>
+
+  <div class="tile reveal" data-cat="affiche" data-index="1">
+    <div class="tile-inner" onclick="openLightbox(1)">
+      <div class="tile-placeholder p-dark">
+        <img class="tile-img" src="assets/AffichEglise.png" alt="Affiche 2">
+      </div>
+      <div class="tile-overlay"><h3>Affiche Église</h3><div class="tools"><span class="tool-tag">Photoshop</span></div></div>
+      <div class="cat-label">Affiche</div><div class="open-icon">↗</div>
+    </div>
+  </div>
+
+  <!-- LIGNE 2 : 1 tall + 1 sqbig + décoratif -->
+  <div class="tile tall reveal" data-cat="affiche" data-index="2">
+    <div class="tile-inner" onclick="openLightbox(2)">
+      <div class="tile-placeholder p-yellow">
+        <img class="tile-img" src="assets/Capture d’écran 2025-12-21 012930.png" alt="Affiche 3">
+      </div>
+      <div class="tile-overlay"><h3>Affiche 3</h3><div class="tools"><span class="tool-tag">Illustrator</span></div></div>
+      <div class="cat-label">Affiche</div><div class="open-icon">↗</div>
+    </div>
+  </div>
+
+  <div class="tile slim" style="pointer-events:none;">
+    <div class="tile-inner" style="background:var(--dark2);display:flex;align-items:center;justify-content:center;">
+      <svg width="120" height="80" viewBox="0 0 120 80">
+        <defs>
+          <pattern id="dots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+            <circle cx="4" cy="4" r="2" fill="rgba(43,91,255,0.5)"/>
+          </pattern>
+        </defs>
+        <rect width="120" height="80" fill="url(#dots)"/>
+      </svg>
+    </div>
+  </div>
+  <div class="tile slim" style="pointer-events:none;">
+  <div class="tile-inner" style="background:var(--yellow);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--black);letter-spacing:4px;transform:rotate(-15deg);white-space:nowrap;">DESIGN ✦ CODE ✦ CREATE ✦</span>
+  </div>
+</div>
+
+  <div class="tile sqbig reveal" data-cat="affiche" data-index="3">
+    <div class="tile-inner" onclick="openLightbox(3)">
+      <div class="tile-placeholder p-blue">
+        <img class="tile-img" src="assets/flyer_tablete.png" alt="Affiche 4">
+      </div>
+      <div class="tile-overlay"><h3>Flyer Tablette</h3><div class="tools"><span class="tool-tag">Photoshop</span></div></div>
+      <div class="cat-label">Affiche</div><div class="open-icon">↗</div>
+    </div>
+  </div>
+
+  <!-- Décoratif -->
+  <div class="tile slim" style="pointer-events:none;">
+    <div class="tile-inner" style="background:linear-gradient(135deg,var(--blue),#0D0D0D);display:flex;align-items:center;justify-content:center;">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <polygon points="30,5 55,50 5,50" stroke="rgba(255,214,0,0.4)" stroke-width="1.5" fill="none"/>
+        <circle cx="30" cy="30" r="8" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Logo et Mockup -->
+  <div class="tile tall reveal" data-cat="logo" data-index="4">
+    <div class="tile-inner" onclick="openLightbox(4)">
+      <div class="tile-placeholder p-dark">✦</div>
+      <div class="tile-overlay"><h3>Identité Visuelle</h3><div class="tools"><span class="tool-tag">Illustrator</span></div></div>
+      <div class="cat-label">Logo</div><div class="open-icon">↗</div>
+    </div>
+  </div>
+
+  
+
+  <div class="tile wide reveal" data-cat="mockup" data-index="5">
+    <div class="tile-inner" onclick="openLightbox(5)">
+      <div class="tile-placeholder p-yellow">📱</div>
+      <div class="tile-overlay"><h3>Mockup App Mobile</h3><div class="tools"><span class="tool-tag">Figma</span></div></div>
+      <div class="cat-label">Mockup UI</div><div class="open-icon">↗</div>
+    </div>
+  </div>
+
+    <!-- DÉCO 3 — Cercles concentriques bleu -->
+  <div class="tile slim" style="pointer-events:none;">
+    <div class="tile-inner" style="background:var(--blue);display:flex;align-items:center;justify-content:center;">
+      <svg width="100" height="100" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+        <circle cx="50" cy="50" r="28" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+        <circle cx="50" cy="50" r="16" stroke="rgba(255,214,0,0.6)" stroke-width="1.5" fill="none"/>
+        <circle cx="50" cy="50" r="5" fill="var(--yellow)"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="tile slim" style="pointer-events:none;">
+    <div class="tile-inner" style="background:var(--yellow);display:flex;align-items:center;justify-content:center;">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--black);letter-spacing:2px;">DESIGN</span>
+    </div>
+  </div>
+  <div class="tile slim" style="pointer-events:none;">
+    <div class="tile-inner" style="background:var(--black);display:flex;align-items:center;justify-content:center;gap:10px;">
+      <svg width="40" height="40" viewBox="0 0 40 40" style="animation:spin 12s linear infinite;">
+        <rect x="8" y="8" width="24" height="24" stroke="var(--yellow)" stroke-width="1.5" fill="none" transform="rotate(45 20 20)"/>
+        <rect x="12" y="12" width="16" height="16" stroke="rgba(255,214,0,0.4)" stroke-width="1" fill="none" transform="rotate(45 20 20)"/>
+      </svg>
+      <span style="font-family:'Space Mono',monospace;font-size:0.65rem;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:2px;">Sofia.dev</span>
+    </div>
+  </div>
+
+</div>
  
 <!-- DIVIDER -->
 <div class="geo-divider reveal">

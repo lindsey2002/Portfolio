@@ -6,9 +6,31 @@
       desc:   "Conception d'une affiche pour un événement culturel universitaire. Travail sur la hiérarchie typographique, l'équilibre visuel et l'impact couleur pour capter l'attention en un coup d'œil.",
       tools:  ["Photoshop", "Illustrator"],
       color:  "p-blue",
-      img: "assets/dev-clair.png"
-      
-      // img: "images/projet1.jpg"
+      img: "assets/_poster_affiche_test.png"
+    },
+    {
+      title:  "Affiche Événement Culturel",
+      cat:    "Affiche & Flyer",
+      desc:   "Conception d'une affiche pour un événement culturel universitaire. Travail sur la hiérarchie typographique, l'équilibre visuel et l'impact couleur pour capter l'attention en un coup d'œil.",
+      tools:  ["Photoshop", "Illustrator"],
+      color:  "p-blue",
+      img: "assets/AffichEglise.png"
+    },
+    {
+      title:  "Affiche Événement Culturel",
+      cat:    "Affiche & Flyer",
+      desc:   "Conception d'une affiche pour un événement culturel universitaire. Travail sur la hiérarchie typographique, l'équilibre visuel et l'impact couleur pour capter l'attention en un coup d'œil.",
+      tools:  ["Photoshop", "Illustrator"],
+      color:  "p-blue",
+      img: "assets/Capture d’écran 2025-12-21 012930.png"
+    },
+    {
+      title:  "Affiche Événement Culturel",
+      cat:    "Affiche & Flyer",
+      desc:   "Conception d'une affiche pour un événement culturel universitaire. Travail sur la hiérarchie typographique, l'équilibre visuel et l'impact couleur pour capter l'attention en un coup d'œil.",
+      tools:  ["Photoshop", "Illustrator"],
+      color:  "p-blue",
+      img: "assets/flyer_tablete.png"
     },
     {
       title:  "Identité Visuelle — Brand",

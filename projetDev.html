@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projets Dev – Herdix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="CSS/projetDev.css">
+
+  <!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="index.html">HEREDIA<span>.dev</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="index.html#services">Compétences</a></li>
+    <li><a href="projet_design.html">Design</a></li>
+    <li><a href="projetDev.html" class="active">Dev</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Me contacter ↗</a>
+  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+ 
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="terminal-badge">projets_dev — html · js · php · flutter · python</div>
+  <h1>PROJETS<br><em>DEV</em> &<br><span>CODE</span></h1>
+  <div class="hero-sub">
+    <p>Des jeux jouables directement ici, des apps backend et des projets mobiles. Du code concret, des vraies solutions.</p>
+    <div>
+      <div class="stack-pills">
+        <span class="pill js">JavaScript</span>
+        <span class="pill php">PHP · Laravel</span>
+        <span class="pill dart">Flutter · Dart</span>
+        <span class="pill py">Python</span>
+        <span class="pill">MySQL · Oracle</span>
+        <span class="pill">Docker · Git</span>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── JEUX & APPS JS ── -->
+<section id="jeux">
+  <div class="sec-eyebrow reveal">Apps & Jeux JavaScript</div>
+  <h2 class="sec-title reveal">JOUE & TESTE<br>DIRECTEMENT</h2>
+ 
+  <div class="jeux-grid">
+ 
+    <!-- PFC -->
+    <div class="game-card reveal">
+      <div class="card-topbar">
+        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+        <span class="topbar-title">PPCiseaux.html — localhost</span>
+      </div>
+      <div class="iframe-wrap">
+        <div class="iframe-overlay" id="overlay-pfc" onclick="loadGame('pfc')">
+          <div class="play-btn">▶</div>
+          <p>Cliquer pour lancer le jeu</p>
+        </div>
+        <iframe id="iframe-pfc" src="" title="Pierre Feuille Ciseaux"></iframe>
+      </div>
+      <div class="game-info">
+        <h3>Pierre Feuille Ciseaux</h3>
+        <p>Le classique revisité — affronte l'ordinateur, suis ton score et tente d'enchaîner les victoires. Logique de jeu complète en JavaScript vanilla.</p>
+        <div class="game-tags">
+          <span class="tag js">JavaScript</span>
+          <span class="tag html">HTML</span>
+          <span class="tag css">CSS</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Lindsey-27" target="_blank" class="card-link gh">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Slot prochain jeu JS -->
+    <div class="game-card reveal" style="border-style: dashed; display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:400px; gap:14px; padding:30px; text-align:center;">
+      <div style="font-size:2.5rem; opacity:0.2;">{ }</div>
+      <p style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--muted); line-height:1.7;">
+        Prochain projet JS<br>en cours de développement...
+      </p>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--blue); border:1px solid rgba(43,91,255,0.3); padding:4px 14px; border-radius:20px;">
+        Bientôt disponible
+      </span>
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- ── AUTRES PROJETS (Backend / Mobile) ── -->
+<section id="autres">
+  <div class="sec-eyebrow reveal">Backend · Mobile · Full-Stack</div>
+  <h2 class="sec-title reveal">AUTRES<br>PROJETS</h2>
+ 
+  <div class="projets-grid">
+ 
+    <!-- App Médicale Laravel -->
+    <div class="projet-card reveal">
+      <div class="projet-preview">
+        <!-- Remplace par : <video src="assets/demo-medical.mp4" autoplay muted loop playsinline></video> -->
+        <div class="projet-preview-placeholder">
+          <div class="preview-icon">🏥</div>
+          <div class="preview-label">Demo vidéo bientôt</div>
+        </div>
+      </div>
+      <div class="code-snippet">
+        <span class="cm">// Gestion des patients</span><br>
+        <span class="kw">Route</span>::<span class="fn">get</span>(<span class="str">'/patients'</span>, [PatientController::<span class="kw">class</span>, <span class="str">'index'</span>]);<br>
+        <span class="kw">Route</span>::<span class="fn">post</span>(<span class="str">'/consultation'</span>, ...);
+      </div>
+      <div class="projet-body">
+        <h3>Application Médicale</h3>
+        <p>Gestion de patients, consultations et dossiers médicaux. Architecture MVC avec Laravel, base de données MySQL.</p>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Avancement</span><span>75%</span></div>
+          <div class="progress-bar"><div class="progress-fill yellow" style="width:75%"></div></div>
+        </div>
+        <div class="game-tags">
+          <span class="tag laravel">Laravel</span>
+          <span class="tag php">PHP</span>
+          <span class="tag mysql">MySQL</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Lindsey-27" target="_blank" class="card-link gh">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- App Mobile Flutter -->
+    <div class="projet-card reveal">
+      <div class="projet-preview">
+        <div class="projet-preview-placeholder">
+          <div class="preview-icon">📱</div>
+          <div class="preview-label">Capture d'écran bientôt</div>
+        </div>
+      </div>
+      <div class="code-snippet">
+        <span class="cm">// Widget Flutter</span><br>
+        <span class="kw">class</span> <span class="fn">HomePage</span> <span class="kw">extends</span> StatefulWidget {<br>
+        &nbsp;&nbsp;<span class="fn">build</span>(context) => <span class="str">Scaffold</span>(...)
+      </div>
+      <div class="projet-body">
+        <h3>App Mobile Flutter</h3>
+        <p>Application mobile cross-platform développée avec Flutter/Dart. Interface Material Design soignée et navigation fluide.</p>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Avancement</span><span>60%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>
+        </div>
+        <div class="game-tags">
+          <span class="tag flutter">Flutter</span>
+          <span class="tag flutter">Dart</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Lindsey-27" target="_blank" class="card-link gh">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Slot prochain projet -->
+    <div class="coming-card reveal">
+      <div class="icon">+</div>
+      <p>Prochain projet<br>en cours...</p>
+      <span>Bientôt disponible</span>
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>HEREDIA<span>.dev</span></h3>
+      <p style="color:var(--muted);font-size:0.8rem;margin-top:4px;">Étudiante en Génie Logiciel & Infographie</p>
+      <span class="footer-email">herediakoumba123@gmail.com</span>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projet_design.html">Projets Design</a></li>
+        <li><a href="projetDev.html">Projets Dev</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Réseaux</h4>
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Behance</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Localisation</h4>
+      <p class="footer-address">Dakar, Sénégal<br>Disponible localement<br>et à distance.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">2025 © HEREDIA.DEV — TOUS DROITS RÉSERVÉS</div>
+</footer>
+
+<script>
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+ 
+  // Charge l'iframe au clic pour ne pas ralentir la page
+  function loadGame(id) {
+  const paths = { pfc: 'projets_dev/PPCiseaux.html' };
+  const iframe  = document.getElementById(`iframe-${id}`);
+  const overlay = document.getElementById(`overlay-${id}`);
+  const wrap    = iframe.closest('.iframe-wrap');
+
+  iframe.src = paths[id];
+  overlay.classList.add('hidden');
+
+  // Une fois chargé, on détecte la taille réelle et on scale automatiquement
+  iframe.onload = () => {
+    const iframeDoc  = iframe.contentDocument || iframe.contentWindow.document;
+    const realWidth  = iframeDoc.documentElement.scrollWidth;
+    const realHeight = iframeDoc.documentElement.scrollHeight;
+
+    const scale = Math.min(
+      wrap.offsetWidth  / realWidth,
+      wrap.offsetHeight / realHeight
+    );
+
+    iframe.style.width          = realWidth  + 'px';
+    iframe.style.height         = realHeight + 'px';
+    iframe.style.transformOrigin = 'top left';
+    iframe.style.transform      = `scale(${scale})`;
+
+    // Ajuste la hauteur de la div pour que rien ne soit coupé
+    wrap.style.height = (realHeight * scale) + 'px';
+    wrap.style.width  = (realWidth  * scale) + 'px';
+  };
+}
+ 
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting)
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

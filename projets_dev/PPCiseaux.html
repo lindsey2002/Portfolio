@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre Feuille Ciseaux</title>
+    <link rel="stylesheet" href="CSS/index2.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+ 
+    <!-- ── MENU ── -->
+    <div id="screen-menu">
+        <div class="menu-emoji-row">✊ 🖐️ ✌️</div>
+        <h1 class="menu-title">Pierre <span>Feuille</span><br>Ciseaux</h1>
+        <p class="menu-subtitle">Défie l'ordinateur</p>
+        <button class="btn-play" onclick="goToGame()">▶ &nbsp;JOUER</button>
+        <div class="menu-rules">
+            <strong>Règles</strong>
+            ✊ Pierre bat ✌️ Ciseaux<br>
+            ✌️ Ciseaux bat 🖐️ Feuille<br>
+            🖐️ Feuille bat ✊ Pierre
+        </div>
+    </div>
+ 
+    <!-- ── GAME ── -->
+    <div id="screen-game">
+        <div class="game-header">
+            <button class="btn-back" onclick="goToMenu()">← Menu</button>
+            <span class="game-title-small">PFC</span>
+            <span class="score-badge" id="score-total">0 pts</span>
+        </div>
+ 
+        <div class="arena">
+            <div class="players-row">
+                <div class="player-card">
+                    <span class="player-label">Toi</span>
+                    <div class="player-choice" id="choix-utilisateur">❓</div>
+                </div>
+                <div class="vs-badge">VS</div>
+                <div class="player-card">
+                    <span class="player-label">Ordi</span>
+                    <div class="player-choice" id="choix-ordinateur">❓</div>
+                </div>
+            </div>
+ 
+            <div class="result-banner">
+                <div class="result-text" id="resultats"></div>
+            </div>
+ 
+            <div class="choice-buttons">
+                <button class="btn-choice" id="pierre" onclick="jouer('pierre')">
+                    <span class="ico">✊</span>Pierre
+                </button>
+                <button class="btn-choice" id="papier" onclick="jouer('papier')">
+                    <span class="ico">🖐️</span>Feuille
+                </button>
+                <button class="btn-choice" id="ciseaux" onclick="jouer('ciseaux')">
+                    <span class="ico">✌️</span>Ciseaux
+                </button>
+            </div>
+ 
+            <div class="score-row">
+                <span class="score-pill win"  id="cnt-win" >0 Victoires</span>
+                <span class="score-pill draw" id="cnt-draw">0 Nuls</span>
+                <span class="score-pill lose" id="cnt-lose">0 Défaites</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="JSCRIPT/PPCiseaux.js"></script>
+</body>
+</html>

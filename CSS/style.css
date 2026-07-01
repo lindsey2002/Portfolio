@@ -108,6 +108,23 @@ img{
     width: 100%;
 }
 
+.section-title{
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+
+.section-title::after{
+    content: "";
+    width: 155px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-s);
+}
+
 /* Navbar stylings */
 .hero-section{
     background: var(--primary-color);
@@ -170,6 +187,57 @@ img{
 .hero-section .hero-image-wrapper{
     max-width: 400px;
     margin-right: 30px;
+}
+
+.about-section{
+    padding: 120px 0;
+    background: var(--light-pink-color);
+}
+
+.about-section .section-content{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+.about-section .about-details .section-title{
+    padding: 0;
+}
+
+.about-section .about-details {
+    max-width: 80%;
+}
+
+.about-section .about-details .text{
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: var(--font-size-m);
+}
+
+.about-section .social-link-list .social-link{
+    color: var(--primary-color);
+    font-size: var(--font-size-l);
+    transition: 0.2s ease;
+}
+
+.about-section .social-link-list .social-link:hover{
+    color: var(--secondary-color);
+}
+
+.about-section .social-link-list {
+    display: flex;
+    justify-content: flex-end; /* flex-start pour à gauche, ou flex-end pour à droite */
+    gap: 25px;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 900px){
@@ -254,5 +322,17 @@ img{
 
     .hero-section .hero-details .buttons{
         justify-content: center;
+    }
+
+    .about-section .section-content{
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .about-section .about-image-wrapper .about-image{
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        aspect-ratio: 1;
     }
 }

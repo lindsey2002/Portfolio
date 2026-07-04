@@ -240,7 +240,291 @@ img{
     margin-top: 20px;
 }
 
-@media screen and (max-width: 900px){
+/* ==========================================================================
+   MENU / PROJECTS SECTION
+   ========================================================================== */
+.menu-section {
+    color: var(--white-color);
+    background: var(--dark-color);
+    padding: 50px 0 100px;
+}
+
+.menu-section .menu-list {
+    margin: 40px;
+    margin-top: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- LES CARTES DE PROJET (TAILLE PROPRE ET COUVERTURE) --- */
+.menu-section .menu-list .menu-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 30px);
+    height: 380px; /* Grande taille adulte */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+/* --- LE CONTENEUR DU SLIDER D'IMAGES --- */
+.menu-image-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Bloque le scroll image par image */
+    scroll-behavior: smooth;
+}
+
+/* Masquer la scrollbar pour garder le design propre */
+.menu-image-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Force l'image à occuper TOUTE la carte sans déformation */
+.menu-image-slider .menu-image {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover; /* Remplit entièrement la boîte */
+    scroll-snap-align: start;
+    transition: transform 0.4s ease;
+}
+
+/* Effet zoom ++ au survol */
+.menu-item:hover .menu-image-slider .menu-image {
+    transform: scale(1.1);
+}
+
+/* --- LES FLÈCHES DE DIRECTION SUR LES CÔTÉS --- */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    transition: background 0.3s;
+    opacity: 0; /* Masquées par défaut, elles apparaissent au survol */
+}
+
+.menu-item:hover .slider-arrow {
+    opacity: 1;
+}
+
+.slider-arrow:hover {
+    background: var(--secondary-color);
+}
+
+.arrow-left { left: 15px; }
+.arrow-right { right: 15px; }
+
+/* --- OVERLAY TEXTE TRANSPARENT (GLASSMORPHISM) --- */
+.menu-section .menu-list .menu-item .menu-item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; /* Aligne tout à gauche (met 'center' si tu préfères centré) */
+    gap: 8px; /* Espace entre la ligne d'icônes et le titre */
+    z-index: 4;
+}
+
+/* Utilisation stricte de tes variables de texte */
+.menu-section .menu-list .menu-item .name {
+    margin: 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    order: 2;
+    white-space: normal; /* Autorise le texte à aller à la ligne si c'est trop long */
+    word-wrap: break-word;
+}
+
+.tech-badges {
+    display: flex;
+    gap: 10px;
+    order: 1; /* Force les icônes à apparaître en premier (en haut) */
+}
+
+.tech-badges i {
+    font-size: 1.3rem;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   POP-UP COMPACT (45% x 50%)
+   ========================================================================== */
+.menu-popup-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.82);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: .35s ease;
+    z-index: 999;
+}
+
+.menu-popup-overlay.active{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.menu-popup-card{
+    position:relative;
+    width:min(380px,92vw);
+    height:min(910px,92vh);
+    background:var(--dark-color);
+    border-radius:22px;
+    border:1px solid rgba(255,255,255,.08);
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    box-shadow: 0 18px 50px rgba(0,0,0,.45);
+    transform:translateY(20px) scale(.97);
+    transition:.35s ease;
+}
+
+.menu-popup-overlay.active .menu-popup-card{
+    transform:translateY(0) scale(1);
+}
+
+.menu-popup-close{
+    position:absolute;
+    top:-1px;
+    right:-1px;
+    width:52px;
+    height:52px;
+    border:none;
+    background:var(--primary-color);
+    color:var(--white-color);
+    font-size:1.15rem;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:0 22px 0 22px;
+    transition:.25s ease;
+    z-index:10;
+}
+
+.menu-popup-close:hover{
+    background:var(--secondary-color);
+    color:var(--dark-color);
+
+}
+
+.menu-popup-media{
+    width:100%;
+    height:64%;
+    background:#111;
+    overflow:hidden;
+    border-top:1px solid rgba(255,255,255,.05);
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+/* Force le slider et l'image du pop-up à respecter la zone média */
+.menu-popup-media img,
+.menu-popup-media video,
+.menu-popup-media iframe,
+.menu-popup-media .menu-image,
+.menu-popup-media .menu-image-slider{
+
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+
+}
+
+/* Zone de description en bas */
+.menu-popup-details {
+    flex:1;
+    padding:22px 26px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+}
+
+.menu-popup-title{
+
+    padding:
+
+        28px
+        65px
+        18px
+        30px;
+    text-align:center;
+    color:var(--white-color);
+    font-size:var(--font-size-xl);
+    font-weight:var(--font-weigth-semibold);
+    letter-spacing:.5px;
+
+}
+
+
+/* ===========================
+          IMAGE ZONE
+=========================== */
+
+.menu-popup-media{
+
+    width:100%;
+    height:64%;
+    background:#111;
+    overflow:hidden;
+    border-top:1px solid rgba(255,255,255,.05);
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.menu-popup-details .text {
+     color:var(--medium-gray-color);
+    font-size:var(--font-size-m);
+    line-height:1.75;
+    overflow-y:auto;
+    padding-right:6px;
+}
+
+.menu-popup-details .text::-webkit-scrollbar{
+    width:6px;
+}
+
+.menu-popup-details .text::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.18);
+    border-radius:20px;
+
+}
+
+@media screen and (max-width: 900px){/*900*/
     :root{
         --font-size-m: 1rem;
         --font-size-l: 1.3rem;
@@ -335,4 +619,39 @@ img{
         max-width: 300px;
         aspect-ratio: 1;
     }
+
+    .menu-section .menu-list { gap: 30px; }
+    .menu-section .menu-list .menu-item { width: calc(100% / 2 - 30px); }
 }
+
+@media screen and (max-width: 1024px){
+    .menu-popup-card{
+        width:370px;
+        height:480px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-section .menu-list {
+        gap: 20px;
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: 100%;
+    }
+    .menu-popup-card{
+    width:370px;
+    height:480px;
+}
+
+.menu-popup-title{
+    font-size:1.35rem;
+}
+}
+
+.menu-popup-media {
+    position: relative; /* Indispensable pour caler les flèches par-dessus l'image */
+}
+
+.menu-popup-media .popup-arrow-left { left: 10px; opacity: 1; }
+.menu-popup-media .popup-arrow-right { right: 10px; opacity: 1; }

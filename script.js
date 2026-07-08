@@ -31,90 +31,115 @@ document.addEventListener("DOMContentLoaded", () => {
     const customCursor = document.getElementById('custom-cursor');
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
-    let isHovering = false;
     const codeParticles = ['<p>', '</div>', '=>', '{ }', '<html>', '();', 'return', '100%'];
 
+    // --- Helpers ---
+    function spawnParticle(x, y, isDark) {
+        const particle = document.createElement('div');
+        particle.classList.add('cursor-particle');
+        if (isDark) particle.classList.add('dark-color');
+        const offsetX = (Math.random() - 0.5) * 20;
+        const offsetY = (Math.random() - 0.5) * 20;
+        particle.style.left = (x + offsetX) + 'px';
+        particle.style.top  = (y + offsetY) + 'px';
+        particle.innerText = codeParticles[Math.floor(Math.random() * codeParticles.length)];
+        document.body.appendChild(particle);
+        setTimeout(() => particle.remove(), 2500);
+    }
+
+    function updateCursorColor() {
+        const el = document.elementFromPoint(mouseX, mouseY);
+        if (el) {
+            const bg = window.getComputedStyle(el).backgroundColor;
+            const isOrange = bg === 'rgb(243, 150, 28)';
+            customCursor.classList.toggle('dark-color', isOrange);
+        }
+    }
+
+    function shrinkCursor() {
+        customCursor.style.width  = '40px';
+        customCursor.style.height = '40px';
+        customCursor.style.left   = mouseX + 'px';
+        customCursor.style.top    = mouseY + 'px';
+        customCursor.classList.remove('hover');
+        customCursor.classList.add('default');
+    }
+
     if (customCursor) {
+        // --- Souris ---
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
-            
-            if (!isHovering) {
+            updateCursorColor();
+            // Toujours repositionner (même en hover, on met à jour mouseX/Y
+            // mais on ne bouge le curseur que hors hover)
+            if (!customCursor.classList.contains('hover')) {
                 customCursor.style.left = mouseX + 'px';
-                customCursor.style.top = mouseY + 'px';
-            }
-            
-            // Détecte la couleur sous le curseur pour tout le site
-            const elementUnder = document.elementFromPoint(mouseX, mouseY);
-            if (elementUnder) {
-                const bgColor = window.getComputedStyle(elementUnder).backgroundColor;
-                if (bgColor === 'rgb(243, 150, 28)' || elementUnder.classList.contains('button') || elementUnder.classList.contains('btn-primary')) {
-                    customCursor.classList.add('dark-color');
-                } else {
-                    customCursor.classList.remove('dark-color');
-                }
+                customCursor.style.top  = mouseY + 'px';
             }
         });
 
-        // Pluie constante de code (même sans bouger)
+        // Pluie constante (souris)
         setInterval(() => {
-            const particle = document.createElement('div');
-            particle.classList.add('cursor-particle');
-            
-            if (customCursor.classList.contains('dark-color')) {
-                particle.classList.add('dark-color');
-            }
-
-            // Léger décalage aléatoire pour que ça tombe autour du curseur
-            const offsetX = (Math.random() - 0.5) * 20;
-            const offsetY = (Math.random() - 0.5) * 20;
-
-            particle.style.left = (mouseX + offsetX) + 'px';
-            particle.style.top = (mouseY + offsetY) + 'px';
-            particle.innerText = codeParticles[Math.floor(Math.random() * codeParticles.length)];
-            
-            document.body.appendChild(particle);
-
-            // Nettoyage après l'animation (2.5s)
-            setTimeout(() => {
-                particle.remove();
-            }, 2500);
+            const isDark = customCursor.classList.contains('dark-color');
+            spawnParticle(mouseX, mouseY, isDark);
         }, 300);
 
+        // --- Touch (mobile) ---
+        document.addEventListener('touchmove', (e) => {
+            const touch = e.touches[0];
+            mouseX = touch.clientX;
+            mouseY = touch.clientY;
+            customCursor.style.left = mouseX + 'px';
+            customCursor.style.top  = mouseY + 'px';
+            updateCursorColor();
+        }, { passive: true });
+
+        document.addEventListener('touchstart', (e) => {
+            const touch = e.touches[0];
+            mouseX = touch.clientX;
+            mouseY = touch.clientY;
+            customCursor.style.left = mouseX + 'px';
+            customCursor.style.top  = mouseY + 'px';
+            // Particule au tap
+            const isDark = customCursor.classList.contains('dark-color');
+            for (let i = 0; i < 3; i++) spawnParticle(mouseX, mouseY, isDark);
+        }, { passive: true });
+
+        // --- Hover sur éléments interactifs ---
         const interactiveElements = document.querySelectorAll('.interactable, a, button, .menu-item');
-        
+
+        // Observer de redimensionnement pour que le curseur suive quand on scrolle
+        const recalcIfHovered = () => {
+            const hovered = document.querySelector(':hover .interactable, a:hover, button:hover, .menu-item:hover');
+            if (!hovered) shrinkCursor();
+        };
+        window.addEventListener('scroll', recalcIfHovered, { passive: true });
+
         interactiveElements.forEach(el => {
-            el.addEventListener('mouseenter', (e) => {
-                isHovering = true;
+            el.addEventListener('mouseenter', () => {
                 const rect = el.getBoundingClientRect();
-                
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-                customCursor.style.left = centerX + 'px';
-                customCursor.style.top = centerY + 'px';
-                
-                customCursor.style.width = (rect.width + 30) + 'px';
+                const centerX = rect.left + rect.width  / 2;
+                const centerY = rect.top  + rect.height / 2;
+
+                customCursor.style.left   = centerX + 'px';
+                customCursor.style.top    = centerY + 'px';
+                customCursor.style.width  = (rect.width  + 30) + 'px';
                 customCursor.style.height = (rect.height + 20) + 'px';
-                
+
                 customCursor.classList.remove('default');
                 customCursor.classList.add('hover');
             });
-            
-            el.addEventListener('mouseleave', (e) => {
-                isHovering = false;
-                
-                customCursor.style.width = '40px';
-                customCursor.style.height = '40px';
-                customCursor.style.left = mouseX + 'px';
-                customCursor.style.top = mouseY + 'px';
-                
-                customCursor.classList.remove('hover');
-                customCursor.classList.add('default');
+
+            // mouseleave = retour immédiat, sans clic nécessaire
+            el.addEventListener('mouseleave', () => {
+                shrinkCursor();
             });
         });
 
         customCursor.classList.add('default');
     }
+
 
     // ==========================================================================
     // 3. FILTRES DE PROJETS

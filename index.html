@@ -1,107 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Website | Développeur Fullstack & Designer</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <title>HR | Développeuse Fullstack & Designer</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-
 <body>
 
-    <!-- header / navbar -->
+    <!-- CUSTOM CURSOR -->
+    <div id="custom-cursor">
+        <span class="cursor-tag left">&lt;</span>
+        <span class="cursor-tag right">&gt;</span>
+    </div>
+
+    <!-- NAVBAR -->
     <header>
         <nav class="navbar section-content">
-            <a href="#" class="nav-logo">
-                <h2 class="logo-text">💻Code&Heredia</h2>
+            <a href="#" class="nav-logo interactable">
+                <div class="css-logo">
+                    <span class="h">H</span><span class="r">R</span>
+                </div>
             </a>
             <ul class="nav-menu">
-                
-                <button id="menu-close-button" class="fas fa-times"></button>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">À propos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projets</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Compétences</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
+                <button id="menu-close-button" class="fas fa-times interactable"></button>
+                <li class="nav-item"><a href="#" class="nav-link interactable">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link interactable">À propos</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link interactable">Projets</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link interactable">Compétences</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link interactable">Services</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link interactable">Contact</a></li>
             </ul>
-            <button id="menu-open-button" class="fas fa-bars"></button>
+            <button id="menu-open-button" class="fas fa-bars interactable"></button>
         </nav>
-    </header>    
+    </header>
 
     <main>
-        <!-- hero section -->
-        <section class="hero-section">
+        <!-- HERO SECTION -->
+        <section class="hero-section scroll-anim">
             <div class="section-content">
                 <div class="hero-details">
                     <h2 class="title">
-                        Développeur Fullstack
+                        Développement & Design
                     </h2>
-                    <h3 class="subtitle">Des solutions digitales sur mesure : Web & Mobile!</h3>
-                    <p class="description">Conception et développement de sites vitrines, d'applications web performantes 
-                et d'applications mobiles intuitives. Transformons vos idées en réalité numérique.
-                    </p>
+                    <h3 class="subtitle">Transformez vos idées en produits digitaux exceptionnels !</h3>
+                    <p class="description">Bienvenue sur mon portfolio. Développeuse Fullstack et Designer UI/UX, je conçois des applications robustes et esthétiques, où chaque ligne de code raconte une histoire.</p>
                     <div class="buttons">
-                        <a href="#projects" class="button order-now">Voir mes projets</a>
-                        <a href="mailto:herediakoumba123@gmail.com" class="button contact-us">Me contacter</a>
+                        <a href="#projects" class="button order-now interactable">Voir Projets</a>
+                        <a href="#contact" class="button contact-us interactable">Me Contacter</a>
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
-                    <img src="assets/coffee-hero-section.png" alt="Illustration Développement Web et Mobile"" class="hero-image">
+                    <img src="img/hero_dev_1783476633779.png" alt="Hero Illustration" class="hero-image">
                 </div>
             </div>
         </section>
 
-         <!-- about section -->
-         <section id="about" class="about-section">
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section scroll-anim">
             <div class="section-content">
                 <div class="about-image-wrapper">
-                    <img src="assets/about-image.jpg" alt="A propos de moi" class="about-image">
+                    <img src="img/about-image.jpg" alt="A propos de moi" class="about-image">
                 </div>
 
                 <div class="about-details">
-                    <h2 class="section-title">A Propos</h2>
+                    <h2 class="section-title">À Propos</h2>
                     <p class="text">
-                        Passionnée par le développement d'applications, je conçois des solutions digitales complètes, du backend robuste aux interfaces mobiles fluides. Mon approche technique repose sur la curiosité, l'optimisation du code et le souci du détail pour transformer des idées complexes en expériences utilisateurs intuitives
+                        Passionnée par le développement d'applications, je conçois des solutions digitales complètes, du backend robuste aux interfaces mobiles fluides. Mon approche technique repose sur la curiosité, l'optimisation du code et le souci du détail pour transformer des idées complexes en expériences utilisateurs intuitives.
                     </p>
 
                     <div class="social-link-list">
-                        <a href="https://www.linkedin.com/in/heredia-koumba-1a3751380" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/heredialindsey?igsh=bDM4ZmhlY3A0Y3ds" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://github.com/lindsey2002" class="social-link"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.tiktok.com/@heredialindsey" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="social-link interactable"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="social-link interactable"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link interactable"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-link interactable"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
-         </section>
+        </section>
 
-         <!-- Projet section -->
-         <section id="projects" class="menu-section">
+        <!-- PROJECTS SECTION (ORIGINAL RESTORED + RESPONSIVE GRID) -->
+        <section id="projects" class="menu-section scroll-anim">
             <h2 class="section-title">Mes Projets</h2>
+            <div class="project-filters">
+                <button class="filter-btn interactable active" data-filter="all">Tout</button>
+                <button class="filter-btn interactable" data-filter="dev">Dev</button>
+                <button class="filter-btn interactable" data-filter="ui-ux">UI-UX</button>
+                <button class="filter-btn interactable" data-filter="design">Design</button>
+            </div>
             <div class="section-content">
-                <ul class="menu-list">
+                <ul class="menu-list responsive-grid">
 
-                    <li class="menu-item">
+                    <li class="menu-item interactable" data-category="dev">
                         <button class="slider-arrow arrow-left"><i class="fas fa-chevron-left"></i></button>
                         <div class="menu-image-slider">
-                            <img src="assets/hot-beverages.png" alt="Projet 1 - Vue 1" class="menu-image">
-                            <img src="assets/desserts.png" alt="Projet 1 - Vue 2" class="menu-image">
-                            <img src="assets/refreshment.png" alt="Projet 1 - Vue 3" class="menu-image">
+                            <img src="img/hot-beverages.png" alt="Projet 1 - Vue 1" class="menu-image">
+                            <img src="img/desserts.png" alt="Projet 1 - Vue 2" class="menu-image">
+                            <img src="img/refreshment.png" alt="Projet 1 - Vue 3" class="menu-image">
                         </div>
                         <button class="slider-arrow arrow-right"><i class="fas fa-chevron-right"></i></button>
 
@@ -114,11 +111,11 @@
                         </div>
                     </li>
 
-                    <li class="menu-item">
+                    <li class="menu-item interactable" data-category="ui-ux">
                         <button class="slider-arrow arrow-left"><i class="fas fa-chevron-left"></i></button>
                         <div class="menu-image-slider">
-                            <img src="assets/special-combo.png" alt="Projet 2 - Vue 1" class="menu-image">
-                            <img src="assets/refreshment.png" alt="Projet 2 - Vue 2" class="menu-image">
+                            <img src="img/special-combo.png" alt="Projet 2 - Vue 1" class="menu-image">
+                            <img src="img/refreshment.png" alt="Projet 2 - Vue 2" class="menu-image">
                         </div>
                         <button class="slider-arrow arrow-right"><i class="fas fa-chevron-right"></i></button>
 
@@ -126,16 +123,16 @@
                             <h3 class="name">Special Combo</h3>
                             <div class="tech-badges">
                                 <i class="fa-brands fa-react"></i>
-                                <i class="fa-brands fa-github"></i>
+                                <i class="fa-brands fa-figma"></i>
                             </div>
                         </div>
                     </li>
 
-                    <li class="menu-item">
+                    <li class="menu-item interactable" data-category="dev">
                         <button class="slider-arrow arrow-left"><i class="fas fa-chevron-left"></i></button>
                         <div class="menu-image-slider">
-                            <img src="assets/refreshment.png" alt="Projet 3 - Vue 1" class="menu-image">
-                            <img src="assets/desserts.png" alt="Projet 3 - Vue 2" class="menu-image">
+                            <img src="img/refreshment.png" alt="Projet 3 - Vue 1" class="menu-image">
+                            <img src="img/desserts.png" alt="Projet 3 - Vue 2" class="menu-image">
                         </div>
                         <button class="slider-arrow arrow-right"><i class="fas fa-chevron-right"></i></button>
 
@@ -147,11 +144,11 @@
                         </div>
                     </li>
 
-                    <li class="menu-item">
+                    <li class="menu-item interactable" data-category="dev">
                         <button class="slider-arrow arrow-left"><i class="fas fa-chevron-left"></i></button>
                         <div class="menu-image-slider">
-                            <img src="assets/desserts.png" alt="Projet 4 - Vue 1" class="menu-image">
-                            <img src="assets/burger-frenchfries.png" alt="Projet 4 - Vue 2" class="menu-image">
+                            <img src="img/desserts.png" alt="Projet 4 - Vue 1" class="menu-image">
+                            <img src="img/burger-frenchfries.png" alt="Projet 4 - Vue 2" class="menu-image">
                         </div>
                         <button class="slider-arrow arrow-right"><i class="fas fa-chevron-right"></i></button>
 
@@ -163,35 +160,34 @@
                         </div>
                     </li>
 
-                    <li class="menu-item">
+                    <li class="menu-item interactable" data-category="design">
                         <button class="slider-arrow arrow-left"><i class="fas fa-chevron-left"></i></button>
                         <div class="menu-image-slider">
-                            <img src="assets/cold-beverages.png" alt="Projet 5 - Vue 1" class="menu-image">
-                            <img src="assets/hot-beverages.png" alt="Projet 5 - Vue 2" class="menu-image">
+                            <img src="img/cold-beverages.png" alt="Projet 5 - Vue 1" class="menu-image">
+                            <img src="img/hot-beverages.png" alt="Projet 5 - Vue 2" class="menu-image">
                         </div>
                         <button class="slider-arrow arrow-right"><i class="fas fa-chevron-right"></i></button>
 
                         <div class="menu-item-overlay">
-                            <h3 class="name">Cold Beverages</h3>
+                            <h3 class="name">Brand Identity</h3>
                             <div class="tech-badges">
-                                <i class="fa-brands fa-js"></i>
+                                <i class="fa-solid fa-bezier-curve"></i>
                             </div>
                         </div>
                     </li>
 
-                    <li class="menu-item">
+                    <li class="menu-item interactable" data-category="ui-ux">
                         <button class="slider-arrow arrow-left"><i class="fas fa-chevron-left"></i></button>
                         <div class="menu-image-slider">
-                            <img src="assets/burger-frenchfries.png" alt="Projet 6 - Vue 1" class="menu-image">
-                            <img src="assets/cold-beverages.png" alt="Projet 6 - Vue 2" class="menu-image">
+                            <img src="img/burger-frenchfries.png" alt="Projet 6 - Vue 1" class="menu-image">
+                            <img src="img/cold-beverages.png" alt="Projet 6 - Vue 2" class="menu-image">
                         </div>
                         <button class="slider-arrow arrow-right"><i class="fas fa-chevron-right"></i></button>
 
                         <div class="menu-item-overlay">
                             <h3 class="name">Burger Frenchfries</h3>
                             <div class="tech-badges">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-figma"></i>
                             </div>
                         </div>
                     </li>
@@ -200,9 +196,10 @@
             </div>
         </section>
 
+        <!-- MENU POPUP (PROJETS) -->
         <div class="menu-popup-overlay">
             <div class="menu-popup-card">
-                <button class="menu-popup-close"><i class="fas fa-times"></i></button>
+                <button class="menu-popup-close interactable"><i class="fas fa-times"></i></button>
                 <h2 class="menu-popup-title">Détails du Projet</h2>
                 <div class="menu-popup-media">
                 </div>
@@ -212,10 +209,109 @@
             </div>
         </div>
 
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section scroll-anim">
+            <div class="section-content">
+                <h2 class="section-title">COMPÉTENCES</h2>
+                <div class="skills-showcase">
+                    <!-- Web Dev -->
+                    <div class="skill-block">
+                        <div class="skill-img"><img src="img/skills_web_1783475290022.png" alt="Web Dev"></div>
+                        <div class="skill-info">
+                            <h3>WEB DEV</h3>
+                            <p>Création d'applications web performantes avec Laravel, Django, Node.js et Vue.js.</p>
+                            <div class="tech-list">
+                                <span class="interactable">Laravel</span><span class="interactable">Django</span><span class="interactable">Node.js</span><span class="interactable">Vue.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile Dev -->
+                    <div class="skill-block reverse scroll-anim">
+                        <div class="skill-img"><img src="img/skills_mobile_1783475298112.png" alt="Mobile Dev"></div>
+                        <div class="skill-info">
+                            <h3>MOBILE DEV</h3>
+                            <p>Développement cross-platform natif et fluide avec Dart et Flutter.</p>
+                            <div class="tech-list">
+                                <span class="interactable">Flutter</span><span class="interactable">Dart</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Design -->
+                    <div class="skill-block scroll-anim">
+                        <div class="skill-img"><img src="img/skills_design_1783475306660.png" alt="UI/UX Design"></div>
+                        <div class="skill-info">
+                            <h3>UI/UX DESIGN</h3>
+                            <p>Conception d'interfaces utilisateurs esthétiques, modernes et centrées utilisateur.</p>
+                            <div class="tech-list">
+                                <span class="interactable">Figma</span><span class="interactable">Photoshop</span><span class="interactable">Illustrator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="services-hero scroll-anim">
+            <div class="section-content">
+                <div class="services-content">
+                    <h2 class="giant-title outline">SERVICES.</h2>
+                    <div class="services-card">
+                        <img src="img/service_hero_1783475313758.png" alt="Services" class="service-img">
+                        <div class="service-text">
+                            <h3>SUR MESURE</h3>
+                            <p>De l'idée à la mise en production, je réalise vos sites vitrines et applications complexes. Exigence, performance et design soigné.</p>
+                            <a href="#contact" class="btn-primary interactable">DEVIS SUR DEMANDE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section scroll-anim">
+            <div class="section-content">
+                <h2 class="section-title">CONTACT</h2>
+                <div class="contact-wrapper">
+                    <p class="contact-text">Un projet en tête ? Contactez-moi directement ou copiez mes coordonnées ci-dessous.</p>
+                    
+                    <div class="contact-card">
+                        <div class="contact-row">
+                            <div class="contact-info-text">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">herediakoumba123@gmail.com</span>
+                            </div>
+                            <a href="mailto:herediakoumba123@gmail.com" class="contact-action-btn interactable" title="Envoyer un email">
+                                <i class="fa-solid fa-envelope"></i> Envoyer
+                            </a>
+                        </div>
+                        
+                        <div class="contact-row">
+                            <div class="contact-info-text">
+                                <span class="contact-label">Téléphone / WhatsApp</span>
+                                <span class="contact-value">+221 77 091 89 16</span>
+                            </div>
+                            <button id="phone-btn" class="contact-action-btn interactable" title="Appeler ou WhatsApp">
+                                <i class="fa-brands fa-whatsapp"></i> Contacter
+                            </button>
+                        </div>
+                        
+                        <div class="contact-row">
+                            <div class="contact-info-text">
+                                <span class="contact-label">Réseaux Sociaux</span>
+                                <span class="contact-value">LinkedIn & GitHub</span>
+                            </div>
+                            <div class="social-btn-group">
+                                <a href="#" class="contact-action-btn icon-only interactable"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" class="contact-action-btn icon-only interactable"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
 
-    <script src="JSCRIPT/script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

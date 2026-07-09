@@ -178,7 +178,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Descriptions simulées pour le popup
     const descriptions = {
         'Hot Beverages': 'Un système complet de gestion de commandes réalisé avec Laravel.',
-        'Special Combo': 'Un UI Kit complet développé avec React et designé sur Figma.',
+        'Portrait side': 'Magnifique portrait pour rappeler que la nature et l\'homme ne font qu\'un .',
+        'Bien mangé': 'Une superbe affiche pour rappeler l\'importance de la nourriture dans notre vie.  Est designé sur Photoshop.',
+        'Ardoise graphique': 'Acheté des ardoises graphique aussi bien utile aux adultes qu\'aux enfants, pour la prise de notes ou s exercer .',
         'Refreshment': 'Application mobile cross-platform codée en Flutter.',
         'Desserts': 'Scripts d\'automatisation Python pour l\'analyse de données.',
         'Brand Identity': 'Refonte complète de l\'identité visuelle et charte graphique.',
